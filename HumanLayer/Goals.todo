@@ -1,0 +1,44 @@
+
+- Register customers with the following fields:
+    # FirstName
+    # LastName
+    # Age
+    # Id
+
+- Multiple customers can be sent in one request
+
+- Validate customers
+    - All fields are required
+    - Age must be above 18
+    - Validate that sent Id is not already in use
+        # Notice: Avoid usage of decorators, since those will generate multiple roadtrips to database
+
+- Ambiguity detected in persistence instructions
+    # Normally this would be refined in Scrum Sessions with POs or directly with clients
+    - Option 1:
+        - Literally order the data within the persistence system
+            # Technically possible with hacks, but with little to no real value for a business
+    - Option 2:
+        - Show the data properly ordered as the request in the GET endpoint
+            - Given that performance is valued, consider using Skip() and Take() to make pagination possible
+
+- Client for this API
+    - Each request should contain at least 2 different customers
+    - Age should be randomized between 10 and 90
+    - ID should be increasing sequentially
+    - The first names and last names of the Appendix should be used in random combinations
+        # Appendix can be found in RawRequirements.txt
+
+            FirstName   LastName
+            Leia        Liberty
+            Sadie       Ray
+            Jose        Harrison
+            Sara        Ronan
+            Frank       Drew
+            Dewey       Powell
+            Tomas       Larsen
+            Joel        Chan
+            Lukas       Anderson
+            Carlos      Lane
+
+- Optional but encouraged: Deploy as a serverless framework

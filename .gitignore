@@ -1,0 +1,11 @@
+
+# Dotfiles and envs
+.*
+
+# Except gitignore
+!.gitignore
+
+# .net resources
+**/bin/
+**/obj/
+**/Publish/

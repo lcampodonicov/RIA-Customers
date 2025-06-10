@@ -1,0 +1,37 @@
+// NotjQuery.js
+
+    function $($Selector) {
+
+        var Nodes = document.querySelectorAll($Selector);
+
+        return {
+            AddClass: $ClassName => {
+                Nodes
+                    .forEach(
+                        $Element =>
+                            $Element.classList.add($ClassName)
+                    )
+                ;
+                return this;
+            },
+            RemoveClass: $ClassName => {
+                Nodes
+                    .forEach(
+                        $Element =>
+                            $Element.classList.remove($ClassName)
+                    )
+                ;
+                return this;
+            },
+            On: ($Event, $Callback) => {
+                Nodes
+                    .forEach(
+                        $Element =>
+                            $Element.addEventListener($Event, $Callback)
+                    )
+                ;
+                return this;
+            }
+        };
+
+    }

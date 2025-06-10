@@ -1,0 +1,60 @@
+
+✔ Refine a Goals.todo from RawRequirements.txt @started(25-06-05 10:34) @done(25-06-05 11:06) @lasted(32m36s)
+✔ Project structure and final refinements to Tasks.todo @started(25-06-05 11:06) @done(25-06-05 11:31) @lasted(25m8s)
+✔ Rest API @done(25-06-10 11:28)
+    ✔ Endpoint to receive the new customers @done(25-06-08 17:14)
+        ✔ Accept multiple customers @started(25-06-05 11:34) @done(25-06-05 12:11) @lasted(37m34s)
+        ✔ Validate customers @done(25-06-08 14:19)
+            ✔ Validate that sent Id is not already in use @started(25-06-05 12:11) @done(25-06-08 14:17) @lasted(3d2h6m40s)
+                # - Interrupted 13:00
+                ✔ Resuming @started(25-06-08 10:06) @done(25-06-08 14:17) @lasted(4h11m43s)
+            ✔ All fields are required @done(25-06-08 14:17)
+            ✔ Age must be above 18 @done(25-06-08 14:17)
+            ✔ Ids duplicated in user input @done(25-06-08 15:59)
+        ✔ Test @started(25-06-08 14:22) @done(25-06-08 17:14) @lasted(2h52m10s)
+            ✔ Ids not already in use @done(25-06-08 16:19)
+            ✔ Required fields @done(25-06-08 17:09)
+            ✔ Age above 18 @done(25-06-08 17:14)
+            # Results of tests
+                # Validation should include duplicated Ids sent by the client
+            ✔ Ids duplicated in user input @done(25-06-08 16:19)
+    ✔ Endpoint to serve the existing customers @done(25-06-10 11:28)
+        ✔ Order customers by their names as per requested @done(25-06-10 11:28)
+            # Alphabetically by firstname and then by lastname
+        ✘ Provide pagination @cancelled(25-06-10 11:28)
+            # Not enough time and no real value for this test
+
+✔ Persistence API @done(25-06-10 11:28)
+    ✔ Project structure, context, models, managers, etc @started(25-06-08 12:35) @done(25-06-08 12:56) @lasted(21m28s)
+    ✔ Simple CRUD (C and R really) @done(25-06-10 11:28)
+        ✔ Create @started(25-06-08 12:45) @done(25-06-08 12:56) @lasted(11m47s)
+        ✔ Read @done(25-06-10 11:28)
+            ✔ Read messages for Ids already used @done(25-06-08 14:18)
+            ✔ Read customers ordered as requested @done(25-06-10 10:22)
+
+✔ Business API @done(25-06-10 11:28)
+    ✔ Provide sorting and validations as reusable objects @done(25-06-09 17:05)
+
+✔ Client API @done(25-06-10 11:28)
+    ✔ Each request should contain at least 2 different customers @started(25-06-09 17:08) @done(25-06-09 17:44) @lasted(36m39s)
+    ✔ Age should be randomized between 10 and 90 @started(25-06-09 17:08) @done(25-06-09 17:44) @lasted(36m37s)
+    ✔ ID should be increasing sequentially @started(25-06-09 17:08) @done(25-06-09 17:39) @lasted(31m42s)
+    ✔ The first names and last names of the Appendix should be used in random combinations @started(25-06-09 17:08) @done(25-06-09 17:39) @lasted(31m47s)
+        # Appendix can be found in RawRequirements.txt
+    ✔ Recreate each and every validation flow @done(25-06-10 11:27)
+
+    ✔ Small frontend @done(25-06-10 11:27)
+        ✔ Page with a Button to send post with generated new customers @done(25-06-10 11:27)
+            ✔ Generate and send routines @done(25-06-10 08:46)
+            ✔ Show errors in case @started(25-06-10 08:46) @done(25-06-10 11:27) @lasted(2h41m26s)
+            ✔ Show created rows @done(25-06-10 11:27)
+        ✘ Login @cancelled(25-06-10 11:27)
+        ✘ Authentication @cancelled(25-06-10 11:27)
+            # Not enough time and no real value for this test
+
+- Deploy
+
+
+
+
+

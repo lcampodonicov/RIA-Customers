@@ -1,0 +1,17 @@
+
+@{
+
+    var IsThereAnyRecords = ViewData["IsThereAnyRecords"] as Boolean? ?? false;
+
+}
+
+<div class="text-center">
+    <h1 class="mb-4"> Generate customers </h1>
+    <p class="mb-4 text-muted"> Press the button to generate and send 10 customers to the backend.</p>
+    <button class="btn btn-primary btn-lg" id="BtnGenerate">Send customers</button>&nbsp;
+    <button class="btn btn-secondary btn-lg" style="display: @(IsThereAnyRecords ? "inline-block":"none");" id="BtnReset">Reset database</button>
+    <div class="mt-4 justify-content-center" id="Status"></div>
+    <div id="NewCustomers"></div>
+</div>
+
+<script src="/js/Customer.js"></script>

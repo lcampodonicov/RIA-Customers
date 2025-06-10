@@ -1,0 +1,30 @@
+# fly.toml app configuration file generated for restapi-polished-paper-4982 on 2025-06-10T14:31:47-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'restapi-polished-paper-4982'
+primary_region = 'mia'
+
+[build]
+  dockerfile = 'riacustomers.rest.dockerfile'
+
+[env]
+  ASPNETCORE_URLS = 'http://+:8080'
+
+[[services]]
+  protocol = 'tcp'
+  internal_port = 8080
+
+  [[services.ports]]
+    port = 80
+    handlers = ['http']
+
+  [[services.ports]]
+    port = 443
+    handlers = ['tls', 'http']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
